@@ -1,8 +1,9 @@
 import Image from "next/image";
 
 export const dynamic = "force-dynamic";
+const API_URL = process.env.NEXT_PUBLIC_URL;
 const getHello = async () => {
-  return await fetch("/api/hello").then((res) => res.json());
+  return await fetch(`${API_URL}/api/hello`).then((res) => res.json());
 };
 
 export default async function Home() {
